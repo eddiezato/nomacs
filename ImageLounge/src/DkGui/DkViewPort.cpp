@@ -553,7 +553,8 @@ void DkViewPort::zoomToFit()
         resetView();
 }
 
-void DkViewPort::toggleZoomFit() {
+void DkViewPort::toggleZoomFit()
+{
     double currentZoom = mWorldMatrix.m11() * mImgMatrix.m11();
     if (qAbs(currentZoom - 1.0) < std::numeric_limits<double>::epsilon()) {
         zoomToFit();
